@@ -19,7 +19,7 @@ function TodoForm({ onAddTodo }) {
 
     try {
       if (inputText.trim().toLowerCase() === 'error') {
-        throw new Error('Simulasi error: Gagal terhubung ke server.')
+        throw new Error('Gagal terhubung ke server.')
       }
 
       const response = await fetch('https://jsonplaceholder.typicode.com/todos', {
@@ -59,7 +59,7 @@ function TodoForm({ onAddTodo }) {
           role="alert"
         >
           <div>
-            <strong>Berhasil!</strong> Tugas berhasil dikirim ke server JSONPlaceholder.
+            <strong>Berhasil!</strong> Tugas berhasil ditambahkan
           </div>
           <button
             type="button"
